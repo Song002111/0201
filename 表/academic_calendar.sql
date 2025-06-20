@@ -1,0 +1,3 @@
+INSERT INTO `academic_calendar` (`id`, `event_name`, `start_date`, `end_date`, `event_type`, `description`, `created_at`, `updated_at`) VALUES (1, '2024-2025学年度', '2025-02-16', '2025-06-30', 'semester', '2024-2025学年度下学期上课时间', '2025-05-19 09:04:23', '2025-05-19 09:04:23');
+INSERT INTO `academic_calendar` (`id`, `event_name`, `start_date`, `end_date`, `event_type`, `description`, `created_at`, `updated_at`) VALUES (2, '五一假期', '2025-05-01', '2025-05-05', 'holiday', '五一劳动节放假', '2025-05-19 09:05:47', '2025-05-19 09:06:40');
+INSERT INTO `academic_calendar` (`id`, `event_name`, `start_date`, `end_date`, `event_type`, `description`, `created_at`, `updated_at`) VALUES (3, '期末考试', '2025-06-23', '2025-06-25', 'exam', '学校组织校考', '2025-05-19 09:17:53', '2025-05-19 09:17:53');

@@ -1,0 +1,222 @@
+@certificate-service-port = 4000
+
+
+#
+##
+# 证书上传测试
+# @prompt certificate-name
+# @prompt certificate-number
+# @prompt image-url
+# @prompt supporting-document-url
+# @prompt supporting-document-type
+# @prompt uploader-name
+# @prompt student-id
+
+POST http://localhost:{{certificate-service-port}}/uploadCertificate
+Content-Type: application/json
+
+{
+    "certificate_name": "{{certificate-name}}",
+    "certificate_number": "{{certificate-number}}",
+    "image_url": "{{image-url}}",
+    "supporting_document_url": "{{supporting-document-url}}",
+    "supporting_document_type": "{{supporting-document-type}}",
+    "uploader_name": "{{uploader-name}}",
+    "student_id": "{{student-id}}"
+}
+
+
+###
+# 证书删除测试
+# @prompt certificate-id
+DELETE http://localhost:{{certificate-service-port}}/deleteCertificate/{{certificate-id}}
+Content-Type: application/json
+
+
+
+###
+# 获取所有证书测试
+GET http://localhost:{{certificate-service-port}}/getAllCertificates
+Content-Type: application/json
+
+
+###
+# 证书修改测试
+# @prompt certificate-id
+# @prompt certificate-name
+# @prompt certificate-number
+# @prompt image-url
+# @prompt supporting-document-url
+# @prompt supporting-document-type
+# @prompt uploader-name
+# @prompt student-id
+
+PUT http://localhost:{{certificate-service-port}}/updateCertificate/{{certificate-id}}
+Content-Type: application/json
+
+{
+    "certificate_name": "{{certificate-name}}",
+    "certificate_number": "{{certificate-number}}",
+    "image_url": "{{image-url}}",
+    "supporting_document_url": "{{supporting-document-url}}",
+    "supporting_document_type": "{{supporting-document-type}}",
+    "uploader_name": "{{uploader-name}}",
+    "student_id": "{{student-id}}"
+}
+
+###
+# 查询证书测试
+# @prompt certificate-id
+GET http://localhost:{{certificate-service-port}}/getCertificate/{{certificate-id}}
+Content-Type: application/json
+
+
+
+#----------------------课程
+###
+# 添加课程测试
+# @prompt course-id
+# @prompt course-name
+# @prompt credits
+POST http://localhost:{{certificate-service-port}}/addCourse
+Content-Type: application/json
+
+{
+    "course_id": "{{course-id}}",
+    "course_name": "{{course-name}}",
+    "credits": {{credits}}
+}
+
+###
+# 删除课程测试
+# @prompt course-id
+DELETE http://localhost:{{certificate-service-port}}/deleteCourse/{{course-id}}
+Content-Type: application/json
+
+###
+# 修改课程测试
+# @prompt course-id
+# @prompt course-name
+# @prompt credits
+PUT http://localhost:{{certificate-service-port}}/updateCourse/{{course-id}}
+Content-Type: application/json
+
+{
+    "course_name": "{{course-name}}",
+    "credits": {{credits}}
+}
+
+###
+# 查询课程测试
+# @prompt course-id
+GET http://localhost:{{certificate-service-port}}/getCourse/{{course-id}}
+Content-Type: application/json
+
+
+#------------------------学分
+###
+# 添加学分测试
+# @prompt student-id
+# @prompt course-id
+# @prompt course-name
+# @prompt credits
+POST http://localhost:{{certificate-service-port}}/addCredit
+Content-Type: application/json
+
+{
+    "student_id": "{{student-id}}",
+    "course_id": "{{course-id}}",
+    "course_name": "{{course-name}}",
+    "credits": {{credits}}
+}
+
+###
+# 查询学生学分测试
+# @prompt student-id
+GET http://localhost:{{certificate-service-port}}/getStudentCredits/{{student-id}}
+Content-Type: application/json
+
+
+#---------------------用户
+###
+# 超级管理员登录测试
+# @prompt username
+# @prompt password
+POST http://localhost:{{certificate-service-port}}/adminLogin
+Content-Type: application/json
+
+{
+    "username": "{{username}}",
+    "password": "{{password}}"
+}
+
+###
+# 管理员注册学生测试
+# @prompt student-id
+# @prompt student-name
+# @prompt class
+# @prompt gender
+# @prompt date-of-birth
+# @prompt id-card
+# @prompt phone-number
+# @prompt address
+POST http://localhost:{{certificate-service-port}}/registerStudent
+Content-Type: application/json
+
+{
+    "student_id": "{{student-id}}",
+    "student_name": "{{student-name}}",
+    "class": "{{class}}",
+    "gender": "{{gender}}",
+    "date_of_birth": "{{date-of-birth}}",
+    "id_card": "{{id-card}}",
+    "phone_number": "{{phone-number}}",
+    "address": "{{address}}"
+}
+
+###
+# 管理员删除学生测试
+# @prompt student-id
+DELETE http://localhost:{{certificate-service-port}}/deleteStudent/{{student-id}}
+Content-Type: application/json
+
+###
+# 普通用户登录测试
+# @prompt account
+# @prompt password
+POST http://localhost:{{certificate-service-port}}/studentLogin
+Content-Type: application/json
+
+{
+    "account": "{{account}}",
+    "password": "{{password}}"
+}
+
+###
+# 普通用户修改密码测试
+# @prompt student-id
+# @prompt old-password
+# @prompt new-password
+PUT http://localhost:{{certificate-service-port}}/updateStudentPassword
+Content-Type: application/json
+
+{
+    "student_id": "{{student-id}}",
+    "old_password": "{{old-password}}",
+    "new_password": "{{new-password}}"
+}
+
+# -----------------------------测试
+###
+# 成绩录入测试
+# @prompt student-id
+# @prompt course-id
+# @prompt score
+POST http://localhost:{{certificate-service-port}}/addGrade
+Content-Type: application/json
+
+{
+    "student_id": "{{student-id}}",
+    "course_id": "{{course-id}}",
+    "score": "{{score}}"
+}

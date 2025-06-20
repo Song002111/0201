@@ -1,0 +1,9 @@
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (1, 'S1001', 'C101', 85.50, '2025-03-12 08:59:50');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (2, 'S1002', 'C102', 90.00, '2025-03-12 08:59:50');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (3, 'S1003', 'C103', 78.00, '2025-03-12 08:59:50');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (4, 'S1004', 'CS104', 88.00, '2025-03-12 08:59:50');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (5, 'S1003', 'C104', 92.50, '2025-03-12 08:59:50');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (6, 'S1001', 'CS105', 80.00, '2025-03-12 08:59:50');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (7, 'S1005', 'C105', 95.00, '2025-03-12 08:59:50');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (8, 'S1003', 'C101', 60.00, '2025-03-12 09:03:56');
+INSERT INTO `grades` (`grade_id`, `student_id`, `course_id`, `score`, `grade_time`) VALUES (9, 'S1001', 'C102', 78.00, '2025-04-03 20:59:04');
